@@ -1,0 +1,50 @@
+<head>
+    <style>
+        td {
+            text-align: center;
+            width: 150px;
+            cursor: pointer;
+
+        }
+    </style>
+    <script>
+        var flag = null;
+        function Tic(obj) {
+            if (obj.innerText != "_") return;
+            if (flag == "O") {
+                flag = "X";
+                obj.innerText = flag;
+            }
+            else {
+                flag = "O";
+                obj.innerText = flag;
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <table border="1" style="width: 500px;height:500px;font-size: 100px;">
+        <col width="150px">
+        <caption style="font-size: 50px">Tic Tac Toe</caption>
+        <tr>
+            <td id='00' onclick="Tic(getElementById('00'))">_</td>
+            <td id='01' onclick="Tic(getElementById('01'))">_</td>
+            <td id='02' onclick="Tic(getElementById('02'))">_</td>
+        </tr>
+        <tr>
+            <td id='10' onclick="Tic(getElementById('10'))">_</td>
+            <td id='11' onclick="Tic(getElementById('11'))">_</td>
+            <td id='12' onclick="Tic(getElementById('12'))">_</td>
+        </tr>
+        <tr>
+            <td id='20' onclick="Tic(getElementById('20'))">_</td>
+            <td id='21' onclick="Tic(getElementById('21'))">_</td>
+            <td id='22' onclick="Tic(getElementById('22'))">_</td>
+        </tr>
+    </table>
+
+</body>
